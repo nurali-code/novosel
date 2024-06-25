@@ -1,0 +1,225 @@
+:root {
+	--clr-base: #070707;
+	--clr-att: #6A4ED4;
+	--clr-att-second: #FD7949;
+	--clr-att-third: #DA2031;
+	--clr-bg-light: #DEDEDE;
+	--clr-border: #DEDEDE;
+	--clr-light: #e4e4e;
+
+	--min: 320px;
+	--max: 1400px;
+    
+    --mb-main: 8rem;
+    --mb-medium: 40px;
+    --mb-last: 12rem;
+    
+    --paddingContainer: 10px;
+
+	font-size: 10px;
+}
+.mb-main {
+    margin-bottom: var(--mb-main) !important;
+}
+.mb-last {
+    margin-bottom: var(--mb-last) !important;
+}
+.mb-medium {
+    margin-bottom: var(--mb-medium) !important;
+}
+.sl-wrap~.sl-wrap {
+	display: none;
+}
+.elm-hidden {
+	display: none;
+}
+/* ----------------------------------- *\
+			main styles
+\* ----------------------------------- */
+body {
+	color: var(--clr-base);
+	background: #F3F3F3;
+    font-size: 16px;
+    line-height: (19/16);
+}
+p, ul, ol, table, blockquote, .bq-text {
+	position: relative;
+    margin-bottom: (19/16em);
+	img {
+		max-width: 100%;
+	}
+	&:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+li {
+	position: relative;
+}
+.list-check {
+    li {
+        padding-left: 35px;
+        &:before {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            background: url(../img/icons/list-check.svg) center no-repeat;
+            background-size: 100% auto;
+            top: 50%;
+            left: -4px;
+            margin-top: -12px;
+        }
+    }
+}
+.menu, .list {
+    margin: 0;
+    padding: 0;
+    li {
+        margin: 0;
+        padding: 0;
+        &:before {
+            display: none;
+        }
+    }
+}
+a {
+    text-decoration: none;
+    color: var(--clr-att);
+    &:hover {
+        text-decoration: none;
+        color: var(--clr-att-second);
+    }
+}
+a.link-main, .link-main {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    &:hover {
+    }
+}
+.link-phone {
+    white-space: nowrap;
+}
+.page-title,
+.page-subtitle,
+h1, .h1-title,
+h2, .h2-title,
+h3, .h3-title,
+h4, .h4-title,
+h5, .h5-title,
+h6, .h6-title {
+	display: block;
+	position: relative;
+    font-weight: bold;
+    margin: 1em 0;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+.page-title, .page-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+}
+.page-subtitle {
+    font-size: 20px;
+}
+.text-danger, .title-danger {
+    color: #EE1515 !important;
+}
+.text-att, .title-att {
+    color: var(--clr-att);
+}
+.text-att-second, .title-att-second {
+    color: var(--clr-att-second);
+}
+.text-light, .title-light {
+    color: var(--clr-light);
+}
+.text-center, .title-center {
+    text-align: center;
+}
+.text-right, .title-right {
+    text-align: right;
+}
+.text-left, .title-left {
+    text-align: left;
+}
+table {
+    &.tbl-main {
+        font-size: 1em;
+        thead {
+            th, td {
+                border: none;
+                text-transform: uppercase;
+                font-size: 1em;
+                color: rgba(7, 7, 7, 0.50);
+                padding-bottom: 4rem;
+            }
+        }
+        th, td {
+            vertical-align: top;
+            text-align: left;
+            font-weight: 400;
+            padding: 0.9em 0.9em 0.9em 3rem;
+            border: none;
+            border-bottom: 1px solid var(--clr-border);
+        }
+    }
+}
+@media (max-width: 1399px) {
+    :root {
+        font-size: 9.5px;
+    }
+}
+@media (max-width: 1199px) {
+    :root {
+        font-size: 9px;
+    }
+}
+@media (max-width: 1023px) {
+    :root {
+        font-size: 8px;
+    }
+    .text-mobile-center, .title-mobile-center {
+        text-align: center;
+    }
+    .text-mobile-right, .title-mobile-right {
+        text-align: right;
+    }
+    .text-mobile-left, .title-mobile-left {
+        text-align: left;
+    }
+    .page-title.title-mobile-small {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .page-subtitle.title-mobile-large {
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+@media (max-width: 767px) {
+    :root {
+        font-size: 7px;
+    }
+}
+@media (min-width: 1024px) {
+    :root {
+        --paddingContainer: 30px;
+    }
+    body {
+        font-size: 18px;
+    }
+    .page-title {
+        font-size: 4.4rem;
+    }
+    .page-subtitle {
+        font-size: 3rem;
+    }
+}
+@media (min-width: 1400px) {
+    :root {
+        --paddingContainer: 50px;
+    }
+}

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Узнать информацию об объектах недвижимости</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/swipebox.min.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./css/new.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <script src="./js/jquery.min.js" defer></script>
+    <script src="./js/slick.min.js" defer></script>
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script src="./js/jquery.swipebox.min.js" defer></script>
+    <script src="./js/jquery.maskedinput.min.js" defer></script>
+    <script src="./js/popper.min.js" defer></script>
+    <script src="./js/tippy-bundle.umd.min.js" defer></script>
+    <script src="./js/scripts.js" defer></script>
+    <style>
+        .tile-many-lines,
+        .text-many-lines {
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div class="wrap wrap-main">
+
+
+        <!-- header -->
+        <header class="header">
+            <!--header-main-panel-->
+            <div class="header-main-panel cnt-section">
+                <div class="inner-wrap">
+                    <div class="logo-wrap">
+                        <a href="" class="logo">
+                            <img src="./img/main/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="menu-wrap js-popup-wrap">
+                        <a href="" class="btn-popup-toggle btn-action-ico ico-menu js-btn-popup-toggle"></a>
+                        <div class="menu-content-block js-popup-block">
+                            <ul class="menu">
+                                <li><a href="">Аренда</a></li>
+                                <li>
+                                    <a href="">Продажа</a>
+                                    <ul>
+                                        <li><a href="">Новостройки</a></li>
+                                        <li><a href="">Вторичка</a></li>
+                                        <li><a href="">Загородная недвижимость</a></li>
+                                        <li><a href="">Коммерческая недвижимость</a></li>
+                                        <li><a href="">Нежилая недвижимость</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Новостройки</a></li>
+                                <li><a href="">Вторичка</a></li>
+                                <li><a href="">Загородная</a></li>
+                                <li><a href="">Нежилая</a></li>
+                                <li><a href="">Коммерческая</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="actions-wrap">
+                        <div class="action-wrap">
+                            <a href="" class="btn-action-ico ico-compare btn button-second"></a>
+                        </div>
+                        <div class="action-wrap">
+                            <a href="" class="btn-action-ico ico-fav btn button-second"></a>
+                        </div>
+                        <div class="action-wrap action-add">
+                            <a href="" class="btn">
+                                <span class="button-ico">
+                                    <img src="./img/icons/plus.svg" alt="">
+                                </span>
+                                <span class="button-title">Добавить объявление</span>
+                            </a>
+                        </div>
+                        <div class="action-wrap">
+                            <a href="" class="btn button-second">
+                                <span class="button-title">Вход </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/header-main-panel-->
+            <!--header-nav-panel-->
+            <div class="header-nav-panel cnt-section">
+                <div class="inner-wrap">
+                    <div class="location-wrap">
+                        <a href="" class="btn-location">
+                            <span class="button-ico">
+                                <img src="./img/icons/location.svg" alt="">
+                            </span>
+                            <span class="button-title">г. Санкт-Петербург</span>
+                        </a>
+                    </div>
+                    <div class="menu-wrap">
+                        <ul class="menu">
+                            <li><a href="">Ипотека от Новосела</a></li>
+                            <li><a href="">Кадастр</a></li>
+                            <li><a href="">Управляющие компании</a></li>
+                            <li><a href="">Застройщики</a></li>
+                            <li>
+                                <a href="">Отчеты</a>
+                                <ul>
+                                    <li><a href="">Об объектах недвижимости</a></li>
+                                    <li><a href="">Об управляющей компании</a></li>
+                                    <li><a href="">О застройщиках</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--/header-nav-panel-->
+            <!--mobile-nav-->
+            <div class="mobile-nav">
+                <a href="" class="btn-action-ico ico-arrow ico-arrow-dark ico-arrow-prev"></a>
+            </div>
+            <!--/mobile-nav-->
+        </header>
+        <!-- /header -->
+
+        <!-- page -->
+        <div class="page-full">
+
+            <!-- breadcrumbs -->
+            <ul class="breadcrumbs fx">
+                <li class="breadcrumbs-item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs-item"><a href="#" class="breadcrumbs__link">Отчеты</a></li>
+                <li class="breadcrumbs-item"><a href="#" class="breadcrumbs__link">Об объектах недвижимости</a></li>
+            </ul>
+            <!-- /breadcrumbs -->
+
+            <!-- info -->
+            <div class="info">
+                <div class="inner-wrap">
+                    <h2 class="h_02">Узнать информацию об объектах недвижимости</h2>
+                    <div class="info-box">
+                        <div class="info__content">
+                            <p class="info__heading">
+                                Перед покупкой жилья необходимо иметь полное собственное представление об объекте и
+                                субъекте
+                                (продавце) сделки.
+                            </p>
+                            <p class="info__description">
+                                Мы давно убедились, что отправной точкой на пути к успешной сделке лежит самостоятельный
+                                анализ
+                                данных. Даже если вы не разбираетесь в цифрах, вам поможет свежий человек, логика и
+                                здравый
+                                смысл.
+                                <br><br>
+                                Запросите отчет об интересующем вас объекте недвижимости с помощью нашего онлайн-сервиса
+                                информационных отчетов, согласно сведениям ЕГРН.
+                            </p>
+                        </div>
+                        <div class="info__image">
+                            <img src="img/real-estate/realestate-info.jpg" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /info -->
+
+            <!-- property -->
+            <div class="property">
+                <h2 class="h_03 property__headline">
+                    Получите базовые актуальные сведения <br>
+                    о квартире, доме или земельном участке
+                </h2>
+
+                <div class="property-slider">
+                    <div class="property-item bgr">
+                        <div class="property-header">
+                            <span class="property-header__heading h_03">Покупаю новострой</span>
+                            <img src="img/real-estate/property-bg.jpg" alt="i" class="property-header__bg">
+                        </div>
+                        <div class="property-details fx-w">
+                            <div class="property-col">
+                                <div class="property-box">
+                                    <h3 class="property-details__title">Базовые сведения о строящемся доме и з/у:
+                                    </h3>
+                                    <ul class="property-details__list">
+                                        <li>— Дата и номер регистрации </li>
+                                        <li>— Кадастровую стоимость</li>
+                                        <li>— Поэтажный план</li>
+                                        <li>— В случае зем.участка и частного дома: план и координаты точек</li>
+                                        <li>— Историю формирования участка</li>
+                                        <li>— И еще много ценной информации!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="property-col">
+                                <div class="property-box">
+                                    <p class="property-box__text">
+                                        Для квартиры предоставлены данные по управлению компаниям,
+                                        по ИПИ можно сразу заказать
+                                        финансово-аналитический отчет по текущему ЖК и дому.
+                                    </p>
+                                </div>
+                                <p class="property-details__note">
+                                    — После осмотра квартиры или дома у Вас есть полный точный адрес.
+                                    Вбейте его в поиск и найдите объект. Перейдя на его страницу,
+                                    сверяйтесь с адресом и закажите отчеты.
+                                </p>
+                            </div>
+                            <button class="btn">Заказать отчет</button>
+                            <button class="btn button-att-lighter">Ознакомиться с примерами</button>
+                        </div>
+                    </div>
+
+                    <div class="property-item bgr">
+                        <div class="property-header">
+                            <span class="property-header__heading h_03">Покупаю или арендую вторичку</span>
+                            <img src="img/real-estate/property-bg_2.jpg" alt="i" class="property-header__bg">
+                        </div>
+                        <div class="property-details fx-w">
+                            <div class="property-col">
+                                <div class="property-box">
+                                    <h3 class="property-details__title">Базовые сведения об объекте:</h3>
+                                    <ul class="property-details__list">
+                                        <li>— Дата и номер регистрации </li>
+                                        <li>— Кадастровую стоимость</li>
+                                        <li>— Тип помещения</li>
+                                        <li>— Поэтажный план</li>
+                                        <li>— В случае зем.участка и частного дома: план и координаты точек</li>
+                                        <li>— И еще много ценной информации!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="property-col">
+                                <div class="property-box">
+                                    <p class="property-box__text">
+                                        Для квартир представляются данные по управляющей компании, по ИНН можно
+                                        сразу
+                                        заказать финансово-аналитический отчет по текущей УК в доме.
+                                    </p>
+                                </div>
+                                <p class="property-details__note">
+                                    — После осмотра квартиры или дома у Вас есть полный точный адрес. Вбейте его в
+                                    поиск
+                                    и найдите объект. Перейдите в карточку, сверьтесь с адресом и закажите отчеты.
+                                </p>
+                            </div>
+                            <button class="btn">Заказать отчет</button>
+                            <button class="btn button-att-lighter">Ознакомиться с примерами</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /property -->
+
+            <!-- included -->
+            <div class="included fx">
+                <div class="included-img">
+                    <img src="img/real-estate/included.svg" alt="i" loading="lazy">
+                </div>
+                <div class="included-title">
+                    <h2 class="included__heading">
+                        В чек включена углубленная юридическая консультация <br>
+                        по имущественным спорам и договорному праву.
+                    </h2>
+                </div>
+            </div>
+            <!-- /included -->
+
+            <!-- apart -->
+            <div class="apart">
+                <h2 class="apart__heading h_03">
+                    После показа квартиры запишите ее номер. <br>
+                    Вводите по порядку или вставьте полный адрес от города до квартиры.
+                </h2>
+                <p class="apart__text">Например: Москва, Проспект Мира 189, кв 10 </p>
+                <div class="apart-form fx">
+                    <input type="text" class="form-input"
+                        placeholder="Начните вводить адрес с города или вставьте кадастровый номер">
+                    <button class="btn button-att">
+                        <span class="button-ico">
+                            <img src="./img/icons/location.svg" alt="">
+                        </span>
+                        <span class="button-title">Найти</span>
+                    </button>
+                </div>
+                <div class="apart-tip bgr fx">
+                    <img src="img/real-estate/tip.jpg" alt="Tip" class="apart-tip__img">
+                    <div class="apart-tip__title">
+                        <h3 class="apart-tip__heading h_03">Аккуратный совет</h3>
+                        <p class="apart-tip__text">
+                            — Если Вам помогает умный риелтор или юрист, все актуальные сведения с запросами он
+                            должен предоставить Вам лично без напоминаний, но обычно ситуация иного характера, и
+                            делать нужно все самостоятельно.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- /apart -->
+
+        </div>
+        <!-- page -->
+
+        <!-- wide -->
+        <div class="wide">
+            <div class="inner-wrap">
+                <h2 class="h_02">
+                    Позаботьтесь о себе <br>
+                    и сделайте все, как надо.
+                </h2>
+            </div>
+            <img src="img/real-estate/wide__bg.jpg" alt="i" loading="lazy" class="wide__bg">
+        </div>
+        <!-- /wide -->
+
+        <!-- how -->
+        <div class="how">
+            <div class="inner-wrap">
+                <div class="how-box bgr fx">
+                    <div class="how-title">
+                        <h2 class="h_03 how__heading">Как сделать все, как надо?</h2>
+                        <p class="how__text">
+                            Итак, у Вас сделка по покупке, тогда лучше
+                            купить сразу 2 отчета «Об объекте» и «О переходе прав». <br>
+                            Если Вы хотите арендовать квартиру, то достаточно «Об объекте».
+                            <br>
+                            <br>
+                            Проанализируйте сведения. Будут вопросы, сразу связывайтесь с нами.
+                        </p>
+                        <div class="how-row fx">
+                            <button class="btn button-att">Отчет об объекте</button>
+                            <button class="btn button-att">Отчет о переходе прав</button>
+                            <button class="btn">Заказать 2 отчета</button>
+                        </div>
+                    </div>
+                    <img src="img/real-estate/how.jpg" alt="i" loading="lazy" class="how__img">
+                </div>
+
+                <div class="how-more bgr">
+                    <div class="how-more__box bgr">
+                        <h3 class="how-more__heading h_03 fx-ac">
+                            <img src="img/real-estate/ic-search.svg" alt="i" loading="lazy">
+                            <span>Что за сведения?</span>
+                        </h3>
+                        <div class="how-more__row fx">
+                            <div class="how-more__title">
+                                <p class="how-more__text">
+                                    Предоставляется информационно-ознакомительный отчет согласно сведения ЕГРН,
+                                    <i class="nwrp">в котором</i> можно увидеть актуальные сведения, такие как:
+                                </p>
+                                <ul class="how-more__list">
+                                    <li>регистрационный номер и дату сделки,</li>
+                                    <li>история переход прав (о переходе прав),</li>
+                                    <li>кадастровый номер, </li>
+                                    <li>кадастровую стоимость, </li>
+                                    <li>история образования з/у или новых (если изучается з.у), </li>
+                                    <li>другие выделенные закадастрированные объекты, если отчет по всему зданию или
+                                        дому (ОКС).</li>
+                                </ul>
+                            </div>
+                            <div class="box box--purple bgr">
+                                <p class="box__text">
+                                    Напоминаем, что ФИО не предоставляются
+                                    в рамках закона <i class="nwrp">о деперсонализации</i> от 01.03.2023 г.
+                                    <br>
+                                    <br>
+                                    Но если объект для сделки уже выбран, то продавец должен предоставить Вам все
+                                    оригиналы, главным образом, выписку из ЕГРН.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="how-more__box bgr">
+                        <h3 class="how-more__heading h_03 fx-ac">
+                            <img src="img/real-estate/ic-check.svg" alt="i" loading="lazy">
+                            <span>Где взять оригиналы?</span>
+                        </h3>
+                        <div class="how-more__row fx">
+                            <div class="how-more__title --less">
+                                <p class="how-more__text">
+                                    Обычно осматривают и изучают несколько объектов, иногда даже много, поэтому лучше
+                                    покупать быстрые отчеты об объектах недвижимости у нас.
+                                </p>
+                            </div>
+                            <div class="box bgr fx">
+                                <p class="box__text">
+                                    Если Вам нужна выписка из ЕГРН, необходимо обращаться <i class="nwrp">к
+                                        продавцам</i> и запрашивать
+                                    бумаги с печатью.
+                                </p>
+                                <p class="box__text">
+                                    Также на сделке нужны только оригиналы. За ними необходимо обращаться
+                                    <i class="nwrp">в МФЦ</i> или на Госуслуги.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="how-more__box bgr">
+                        <h3 class="how-more__heading h_03 fx-ac">
+                            <img src="img/real-estate/ic-box.svg" alt="i" loading="lazy">
+                            <span>Мне нужно много отчетов. Есть ли пакеты?</span>
+                        </h3>
+                        <p class="how-more__subtext">
+                            Да, все подготовлено для частых заказов, если у Вас много объектов
+                            или Вы постоянно работаете с недвижимостью. <a href="#">Пакетные предложения</a>
+                            сформированы на
+                            нашем сервисе.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /how -->
+
+        <!-- wide -->
+        <div class="wide">
+            <div class="inner-wrap">
+                <div class="wide-col">
+                    <h2 class="h_03">Мы все изучили, остались вопросы!</h2>
+                    <div class="wide-box bgr">
+                        Посмотрите, пожалуйста, <a href="#">эту статью</a>,
+                        где рассказываются основополагающие факторы рисков при покупке недвижимости.
+                        <br>
+                        <br>
+                        Свяжитесь с нами с помощью этой формы обратной связи:
+                    </div>
+
+                    <form class="wide-form fx">
+                        <input type="text" class="form-input" placeholder="Имя" required>
+                        <input type="email" class="form-input" placeholder="E-mail" required>
+                        <button type="submit" class="btn">Отправить</button>
+                    </form>
+                    <p class="form__policy">Нажимая кнопку “Отправить” Вы соглашаетесь с <a href="#">политикой
+                            конфиденциальности</a>.</p>
+
+                </div>
+            </div>
+            <img src="img/real-estate/wide__bg-2.jpg" alt="i" loading="lazy" class="wide__bg">
+        </div>
+        <!-- /wide -->
+
+        <!-- dnt -->
+        <div class="dnt">
+            <div class="inner-wrap">
+                <div class="dnt-box bgr fx">
+                    <div class="dnt-title">
+                        <h2 class="h_03 dnt__heading">
+                            Сведения поступили неполностью. <br>
+                            Отчет вообще не поступает. Что делать?
+                        </h2>
+                        <p class="dnt__subtext c-second">Присылайте номер заявки и Ваш вопрос.</p>
+                        <p class="dnt__text">
+                            Бывает, что базы тормозят или сведения вообще не поступают из-за технический или иной
+                            причины, тогда мы предлагаем перезаказать через какое-то время или возврат суммы заказа.
+                        </p>
+                    </div>
+                    <div class="dnt-img">
+                        <img src="img/real-estate/blocks.jpg" alt="b" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="dnt-box bgr fx-ac">
+                    <div class="dnt-title">
+                        <h2 class="h_03 dnt__heading">Где найти кадастровый номер?</h2>
+                        <p class="dnt__subtext">
+                            Кадастровый номер выглядит так: <br>
+                            <span class="c-main">78:50:0605012:123</span>
+                        </p>
+                        <p class="dnt__text">
+                            Его можно найти в документах на недвижимость, выписке ЕГРН, кадастровом паспорте, в
+                            “Зелёнке” на дом, участок, квартиру и т.д.
+                        </p>
+                        <button class="btn">Начать поиск</button>
+                    </div>
+                    <div class="dnt-slider fx">
+                        <div class="dnt-slide">
+                            <p class="dnt-slide__text">Свидетельство <br> о регистрации права</p>
+                            <img src="img/real-estate/ex-1.png" alt="i" loading="lazy">
+                        </div>
+                        <div class="dnt-slide">
+                            <p class="dnt-slide__text">План БПИ <br> / Кад. паспорт</p>
+                            <img src="img/real-estate/ex-2.png" alt="i" loading="lazy">
+                        </div>
+                        <div class="dnt-slide">
+                            <p class="dnt-slide__text">Выписка из ЕГРН / ГКН <br> / Договор / Наследство</p>
+                            <img src="img/real-estate/ex-3.png" alt="i" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exmp bgr">
+                    <h2 class="h_03 exmp__heading">Примеры готовых отчетов об объекте недвижимости</h2>
+                    <div class="exmp-slider">
+                        <div class="exmp-slide">
+                            <img src="img/real-estate/exmp-1.jpg" alt="ex" loading="lazy" class="exmp__img">
+                            <div class="exmp-content">
+                                <div class="bgr exmp-top">
+                                    <h4 class="exmp__heading">Отчет об объекте недвижимости о кадастровой стоимости</h4>
+                                    <p class="exmp__text">Пример отчета содержит кадастровую стоимость <br> по которой начисляется налог</p>
+                                </div>
+                                <div class="bgr exmp-bottom">
+                                    <h5 class="exmp__subheading fx-ac">
+                                        <img src="img/real-estate/ic-exmp.svg" alt="i" loading="lazy">
+                                        <span>Содержание отчета:</span>
+                                    </h5>
+                                    <ul class="exmp-list">
+                                        <li>Точный адрес участка</li>
+                                        <li>Площадь участка</li>
+                                        <li>Кадастровая стоимость на запрашиваемую дату</li>
+                                        <li>Может содержать дополнительные сведения</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /dnt -->
+
+
+
+
+
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="inner-wrap">
+                <div class="menu-wrap">
+                    <ul class="menu">
+                        <li><a href="">Карта сайта</a></li>
+                        <li><a href="">Служба поддержки</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                    <ul class="menu">
+                        <li><a href="">О проекте</a></li>
+                        <li><a href="">Политика конфиденциальности</a></li>
+                        <li><a href="">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+                <div class="contacts-wrap">
+                    <div class="cnt-wrap cnt-email">
+                        <div class="cnt-title">Почта:</div>
+                        <a href="mailto:inf@novosel.ru" class="link-email link-main">inf@novosel.ru</a>
+                    </div>
+                    <div class="cnt-wrap cnt-phone">
+                        <a href="tel:88007752471" class="link-phone">8-800-775-24-71</a>
+                    </div>
+                </div>
+                <div class="logos-wrap">
+                    <div class="logo-wrap">
+                        <div class="logo">
+                            <img src="./img/main/logo-second.png" alt="">
+                        </div>
+                        <div class="logo-title">Участник Московской торгово-промышленной палаты</div>
+                    </div>
+                    <div class="logo-wrap">
+                        <div class="logo">
+                            <img src="./img/main/logo-third.png" alt="">
+                        </div>
+                        <div class="logo-title">Официальный ипотечный партнер ДОМРФ</div>
+                    </div>
+                </div>
+                <div class="info-wrap">
+                    <p>ИНН 774314968957</p>
+                    <p>ОГРН 308770000440623</p>
+                </div>
+                <div class="footer-bottom-wrap">
+                    <div class="bottom-info-wrap">
+                        <p>© 2000–2023 Novosel.ru</p>
+                    </div>
+                    <div class="pays-wrap">
+                        <ul class="list">
+                            <li><img src="./img/icons/pay01.png" alt=""></li>
+                            <li><img src="./img/icons/pay02.png" alt=""></li>
+                            <li><img src="./img/icons/pay03.png" alt=""></li>
+                            <li><img src="./img/icons/pay04.png" alt=""></li>
+                            <li><img src="./img/icons/pay05.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
+
+        <!--footer-mobile-panel-->
+        <div class="footer-mobile-panel">
+            <div class="actions-inner-wrap">
+                <div class="action-wrap">
+                    <a href="" class="btn-footer">
+                        <span class="button-ico">
+                            <img src="./img/icons/m01.svg" alt="">
+                        </span>
+                        <span class="button-title">Поиск</span>
+                    </a>
+                </div>
+                <div class="action-wrap">
+                    <a href="" class="btn-footer">
+                        <span class="button-ico">
+                            <img src="./img/icons/m02.svg" alt="">
+                        </span>
+                        <span class="button-title">Сравнить</span>
+                    </a>
+                </div>
+                <div class="action-wrap">
+                    <a href="" class="btn-footer button-att">
+                        <span class="button-ico">
+                            <img src="./img/icons/plus.svg" alt="">
+                        </span>
+                        <span class="button-title">Добавить</span>
+                    </a>
+                </div>
+                <div class="action-wrap">
+                    <a href="" class="btn-footer">
+                        <span class="button-ico">
+                            <img src="./img/icons/m03.svg" alt="">
+                        </span>
+                        <span class="button-title">Избранное</span>
+                    </a>
+                </div>
+                <div class="action-wrap">
+                    <a href="" class="btn-footer">
+                        <span class="button-ico">
+                            <img src="./img/icons/m04.svg" alt="">
+                        </span>
+                        <span class="button-title">Профиль</span>
+                    </a>
+                </div>
+            </div>
+        </div><!--/footer-mobile-panel-->
+
+    </div>
+    <!-- /wrap -->
+
+
+
+</body>
+
+</html>

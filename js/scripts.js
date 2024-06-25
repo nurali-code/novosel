@@ -590,3 +590,18 @@ $('.property-slider').slick({
 	autoplay: false,
 	autoplaySpeed: 2000,
 })
+
+// property-slider
+$('.exmp-slider').slick({
+	dots: true,
+	slidesToShow: 1,
+	variableWidth: false,
+	infinite: false,
+	adaptiveHeight: false,
+	rows: 1,
+	swipeToSlide: true,
+	prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
+	nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',
+	autoplay: false,
+	autoplaySpeed: 2000,
+})

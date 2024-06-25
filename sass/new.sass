@@ -361,6 +361,37 @@
 
 .exmp
     padding: 40px
+    position: relative
+    &__headline
+
+        margin-bottom: 60px
+    .slick
+        &-arrow
+            display: inline-block
+            position: absolute
+            top: 33px
+            right: 40px
+
+        &-slider
+            position: static
+
+        &-dots
+            padding-top: 35px
+            display: flex
+            li
+                width: 50%
+                max-width: unset
+                button
+                    height: 5px
+                &:not(.slick-active)
+                    button
+                        background-color: rgba(222, 222, 222, 1)
+
+    .ico
+        &-arrow
+            &-prev
+                right: 110px
+
     &-slide
         display: flex !important
         justify-content: space-between
@@ -425,5 +456,5 @@
     &-bottom
         background-color: rgba(243, 243, 243, 1)
 
-        min-height: 50b%
+        min-height: 50%
         padding: 30px

@@ -42,12 +42,23 @@ b, strong
             background-color: #FFF2E5
             border-color: #FFF2E5
 
+    &-light
+        &-blue 
+            background-color: #fff
+            border-color: white 
+            color: var(--clr-att)
+            &:not(:hover)
+                .button-ico
+                    filter: none
+
 .bgr
     background-color: #fff
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.05)
     border-radius: 10px
     overflow: hidden
     color: var(--clr-base)
+    position: relative
+    z-index: 1
 
 .nwrp
     font-style: normal
@@ -68,10 +79,12 @@ b, strong
         background: rgba(226, 220, 247, 1)
         color: var(--clr-att)
 
-.fx, .fx-w, .fx-ac
+.fx, .fx-w, .fx-ac, .fx-col
     display: flex
 
 .fx
+    &-col 
+        flex-direction: column
     &-w
         flex-wrap: wrap
 

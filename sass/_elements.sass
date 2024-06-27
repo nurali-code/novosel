@@ -10,7 +10,7 @@
         font-size: 30px
         line-height: 35.55px
 
-.c 
+.c
     &-main
         color: var(--clr-att)
     &-second
@@ -23,7 +23,7 @@ b, strong
     &-input
         &::placeholder
             color: rgba(7, 7, 7, 0.5)
-            
+
     &__policy
         font-size: 12px
         font-weight: 500
@@ -43,9 +43,9 @@ b, strong
             border-color: #FFF2E5
 
     &-light
-        &-blue 
+        &-blue
             background-color: #fff
-            border-color: white 
+            border-color: white
             color: var(--clr-att)
             &:not(:hover)
                 .button-ico
@@ -79,14 +79,33 @@ b, strong
         background: rgba(226, 220, 247, 1)
         color: var(--clr-att)
 
-.fx, .fx-w, .fx-ac, .fx-col
+.slick-slider 
+    display: block !important
+    
+.slick-dots-gray
+    .slick
+        &-dots
+            padding-top: 35px
+            display: flex
+            li
+                button
+                    height: 5px
+
+                &:not(.slick-active)
+                    button
+                        background-color: rgba(222, 222, 222, 1)
+
+.fx, .fx-w, .fx-ac, .fx-col, .fx-jb
     display: flex
 
 .fx
-    &-col 
+    &-col
         flex-direction: column
     &-w
         flex-wrap: wrap
 
     &-ac
         align-items: center
+
+    &-jb
+        justify-content: space-between

@@ -237,7 +237,7 @@
     &-form
         gap: 10px
 
-    &-row
+    &-slider
         gap: 20px
         width: 100%
         margin-top: 82px
@@ -260,6 +260,20 @@
             font-size: 18px
             line-height: 22.33px
 
+    @media screen and ( max-width: 1200px )
+        &-slider
+            // max-width: 600px
+            margin: 0 auto
+
+        .slick
+            &-list,
+            &-track
+                display: flex !important
+            &-slide
+                padding: 0 10px
+                div 
+                    height: 100%
+
 .how
     padding: 50px 0
     &-box
@@ -274,6 +288,7 @@
 
     &-title
         padding: 40px
+        max-width: 70%
 
     &-row
         gap: 10px
@@ -330,6 +345,25 @@
             gap: 10px
             margin-bottom: 40px
 
+    &__img
+        max-width: 30%
+        object-fit: contain
+
+    @media screen and ( max-width: 1200px )
+        &-more
+            &__title
+                max-width: 100%
+                width: 100% !important
+
+            &__row
+                flex-wrap: wrap
+
+            &__text
+                width: 100%
+
+            .box
+                width: 100% !important
+
 .dnt
     padding: 50px 0
     &-box
@@ -337,7 +371,8 @@
         margin-bottom: 40px
 
     &-title
-        padding: 40px
+        width: 60%
+        padding: 40px 0 40px 40px
         .btn
             margin-top: 20px
 
@@ -345,6 +380,7 @@
         margin-bottom: 60px
 
     &-img
+        width: 40%
         padding: 40px 50px 0 0
         img
             width: 100%
@@ -371,19 +407,39 @@
         text-align: center
         margin: 0 20px
         &__text
+            text-transform: uppercase
             font-size: 16px
             font-weight: 400
             line-height: 18.96px
-        &__img
+        img
+            min-width: 50%
+            min-height: 1vw
             display: block
-            margin: 0
+            margin: 0 auto
+
+    .slick
+        &-slider
+            display: block !important
+
+        &-dots
+            padding-top: 30px
+            li
+
+    @media screen and ( max-width: 1200px )
+        &-img
+            padding: 20px 20px 0 0
+
+        &-slider
+            width: 40%
+            min-width: unset
 
 .exmp
     padding: 40px
     position: relative
     &__headline
-
+        max-width: 85%
         margin-bottom: 60px
+
     .slick
         &-arrow
             display: inline-block
@@ -396,16 +452,8 @@
 
         &-dots
             padding-top: 35px
-            display: flex
             li
-                width: 50%
                 max-width: unset
-                button
-                    height: 5px
-
-                &:not(.slick-active)
-                    button
-                        background-color: rgba(222, 222, 222, 1)
 
     .ico
         &-arrow
@@ -413,6 +461,7 @@
                 right: 110px
 
     &-slide
+        padding: 0 5px
         display: flex !important
         justify-content: space-between
 
@@ -421,6 +470,8 @@
 
     &__img
         width: 36.886%
+        object-fit: contain
+        object-position: center center
 
     &__heading
         font-weight: 500

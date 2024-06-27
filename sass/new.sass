@@ -16,7 +16,7 @@
             margin-left: 8px
 
 .inf
-    padding: 50px 0
+    // padding: 50px 0
     &-box
         justify-content: space-between
 
@@ -45,12 +45,15 @@
         display: block
 
 .property
-    padding: 50px 0
+    // padding: 50px 0
     position: relative
     z-index: 1
     overflow: hidden
 
     &__headline
+        margin: 0
+
+    &-header
         margin-bottom: 60px
 
     &__title
@@ -65,37 +68,39 @@
         max-width: 970px
         margin: 0 40px 0 0
 
-    &-header
-        position: relative
-        z-index: 1
-        min-height: 150px
-        padding: 30px
-        border-radius: 10px 10px 0 0
-        overflow: hidden
-        color: #fff
-        &__bg
-            position: absolute
-            top: 0
-            left: 0
-            z-index: -1
-            width: 100%
-            height: 100%
-            object-fit: cover
+        &-header
+            position: relative
+            z-index: 1
+            min-height: 150px
+            padding: 30px
+            border-radius: 10px 10px 0 0
+            overflow: hidden
+            color: #fff
+            &__bg
+                position: absolute
+                top: 0
+                left: 0
+                z-index: -1
+                width: 100%
+                height: 100%
+                object-fit: cover
 
     .slick
-        &-arrow
-            display: inline-block
-            position: absolute
-            top: -120px
-            right: 0
-
         &-list
             overflow: visible
 
-    .ico
-        &-arrow
-            &-prev
-                right: 7rem
+    &-counter
+        margin: 0 32px 0 auto
+        font-weight: 500
+        font-size: 42px
+        line-height: 49.77px
+
+    &__total
+        font-size: 24px
+        line-height: 28.44px
+
+    &-prev
+        margin-right: 20px
 
     &-box
         border-radius: 10px
@@ -212,7 +217,7 @@
     min-height: 489px
     padding: 70px 0
     color: white
-    margin: 0 0 50px
+    margin: 50px 0
     &__bg
         position: absolute
         top: 0
@@ -221,6 +226,7 @@
         height: 100%
         z-index: -11
         object-fit: cover
+        pointer-events: none
 
     &-col
         max-width: 710px
@@ -271,11 +277,11 @@
                 display: flex !important
             &-slide
                 padding: 0 10px
-                div 
+                div
                     height: 100%
 
 .how
-    padding: 50px 0
+    // padding: 50px 0
     &-box
         padding-right: 30px
         margin-bottom: 100px
@@ -365,7 +371,7 @@
                 width: 100% !important
 
 .dnt
-    padding: 50px 0
+    // padding: 50px 0
     &-box
         justify-content: space-between
         margin-bottom: 40px
@@ -401,7 +407,7 @@
 
     &-slider
         padding-right: 40px
-        min-width: 55%
+        min-width: 58%
 
     &-slide
         text-align: center
@@ -531,7 +537,7 @@
         padding: 30px
 
 .serv
-    padding: 50px 0 60px
+    // padding: 50px 0 60px
     &__heading
         margin-bottom: 40px
 
@@ -586,7 +592,7 @@
             margin-top: auto
 
 .req
-    padding: 60px 0
+    // padding: 60px 0
     &-col
         max-width: 513px
 
@@ -614,7 +620,7 @@
         z-index: -111
 
 .rev
-    padding: 60px 0
+    // padding: 60px 0
     &-box
         padding: 40px
 
@@ -646,6 +652,25 @@
             font-weight: 300
             font-size: 16px
             line-height: 18.96px
+
+    @media screen and ( min-width: 1200px )
+        &-slider
+            display: none
+    @media screen and ( max-width: 1200px )
+        &__heading
+            text-align: center
+
+        &-row
+            display: none
+
+        &-box
+            padding: 40px 0
+
+        .slick
+            &-dots
+                padding: 0
+            &-slide
+                padding: 5px 30px 35px
 
 .blg
     background-color: #fff

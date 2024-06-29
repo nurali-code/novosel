@@ -10,6 +10,12 @@
         font-size: 30px
         line-height: 35.55px
 
+    @media screen and ( max-width: 900px )
+        &_02
+            font-size: 30px
+            line-height: 35.55px
+            margin-bottom: 40px
+
 .c
     &-main
         color: var(--clr-att)
@@ -83,8 +89,6 @@ b, strong
     &-slider
         display: block !important
 
-    
-
 .section
     padding: 50px 0
 
@@ -101,7 +105,7 @@ b, strong
                     button
                         background-color: rgba(222, 222, 222, 1)
 
-.fx, .fx-w, .fx-ac, .fx-col, .fx-jb
+.fx, .fx-w, .fx-ac, .fx-as, .fx-col, .fx-jb
     display: flex
 
 .fx
@@ -110,6 +114,8 @@ b, strong
     &-w
         flex-wrap: wrap
 
+    &-as
+        align-items: flex-start
     &-ac
         align-items: center
 

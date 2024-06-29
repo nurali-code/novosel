@@ -147,7 +147,7 @@
             <!-- inf -->
             <div class="section inf">
                 <div class="inner-wrap">
-                    <h2 class="h_02">Узнать информацию об объектах недвижимости</h2>
+                    <h2 class="h_02 inf__headline">Узнать информацию об объектах недвижимости</h2>
                     <div class="inf-box fx bgr">
                         <div class="inf__content">
                             <p class="inf__heading">
@@ -166,7 +166,7 @@
                                 информационных отчетов, согласно сведениям ЕГРН.
                             </p>
                         </div>
-                        <div class="inf__image">
+                        <div class="inf__img">
                             <img src="img/real-estate/realestate-info.jpg" alt="Image">
                         </div>
                     </div>
@@ -184,15 +184,16 @@
                         Получите базовые актуальные сведения <br>
                         о квартире, доме или земельном участке
                     </h2>
-                    <div class="property-counter">
-                        <span class="property__current">1</span> /<span class="property__total">2</span>
+                    <div class="property-controls fx-ac">
+                        <div class="property-counter">
+                            <span class="property__current">1</span> /<span class="property__total">2</span>
+                        </div>
+                        <button class="property-prev btn-action-ico ico-arrow ico-arrow-prev"></button>
+                        <button class="property-next btn-action-ico ico-arrow ico-arrow-next"></button>
                     </div>
-                    <button class="property-prev btn-action-ico ico-arrow ico-arrow-prev"></button>
-                    <button class="property-next btn-action-ico ico-arrow ico-arrow-next"></button>
-
                 </div>
 
-                <div class="property-slider">
+                <div class="property-slider slick-dots-gray">
                     <div class="property-item bgr">
                         <div class="property-item-header">
                             <span class="property-item-header__heading h_03">Покупаю новострой</span>
@@ -201,7 +202,7 @@
                         <div class="property-details fx-w">
                             <div class="property-col">
                                 <div class="property-box">
-                                    <h3 class="property-details__title">Базовые сведения о строящемся доме и з/у:
+                                    <h3 class="property-details__heading">Базовые сведения о строящемся доме и з/у:
                                     </h3>
                                     <ul class="property-details__list">
                                         <li>— Дата и номер регистрации </li>
@@ -240,7 +241,7 @@
                         <div class="property-details fx-w">
                             <div class="property-col">
                                 <div class="property-box">
-                                    <h3 class="property-details__title">Базовые сведения об объекте:</h3>
+                                    <h3 class="property-details__heading">Базовые сведения об объекте:</h3>
                                     <ul class="property-details__list">
                                         <li>— Дата и номер регистрации </li>
                                         <li>— Кадастровую стоимость</li>
@@ -731,93 +732,160 @@
             <div class="inner-wrap">
                 <div class="rev-box bgr">
                     <h2 class="h_03 rev__heading">Отзывы о нас и сервисе</h2>
-                    <div class="rev-row fx">
-                        <div class="rev-col fx-col">
-                            <div class="rev-item bgr">
-                                <h3 class="rev-item__header fx">
-                                    <span class="rev-item__name">Олег Л.</span>
-                                    <img src="img/real-estate/stars.svg" alt="i" loading="lazy" class="rev-item__stars">
-                                </h3>
-                                <p class="rev-item__text">
-                                    Спасибо. Пользоваться очень удобно. Поиск земельного участка по кадастровому
-                                    номеру или адресу, на карте со схематичным и спутниковым отображением, а также
-                                    кадастровых границ участка, районов с совмещением карт яндекса и ОСМ. Заказывал
-                                    отчеты несколько раз, все очень удобно. Поддержка решает вопросы очень быстро,
-                                    если что-то не удалось получить, делается возврат, но я постоянно пользуюсь и
-                                    прошу сделать компенсации.
-                                </p>
+                    <div class="rev-slider fx slick-dots-gray">
+                        <div class="rev-slide">
+                            <div class="rev-item fx-as">
+                                <img src="img/rev-1.png" alt="i" loading="lazy" class="rev__icon">
+                                <div class="rev-content">
+                                    <h3 class="rev__name">Светлана</h3>
+                                    <p class="rev__info fx-ac">
+                                        <img src="img/real-estate/stars.svg" alt="i" loading="lazy">
+                                        <span class="rev__time">6 сентября 2021 г.</span>
+                                    </p>
+                                    <p class="rev__text">
+                                        Пользуюсь данным ресурсом уже года два. Регулярно заказываю выписки ЕГРН.
+                                        Благодаря
+                                        пакетным предложениям, выписка выходит гораздо дешевле, чем если
+                                        заказывать
+                                    </p>
+                                </div>
                             </div>
-                            <div class="rev-item bgr">
-                                <h3 class="rev-item__header fx">
-                                    <span class="rev-item__name">Олег Л.</span>
-                                    <img src="img/real-estate/stars.svg" alt="i" loading="lazy" class="rev-item__stars">
-                                </h3>
-                                <p class="rev-item__text">
-                                    Удобно получать необходимую информацию об объектах недвижимости, и делается это все
-                                    очень оперативно! Отмечу быстрые ответы тех.поддержки.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="rev-col fx-col">
-                            <div class="rev-item bgr">
-                                <h3 class="rev-item__header fx">
-                                    <span class="rev-item__name">Таша</span>
-                                    <img src="img/real-estate/stars.svg" alt="i" loading="lazy" class="rev-item__stars">
-                                </h3>
-                                <p class="rev-item__text">
-                                    Отличный сайт, который всегда необходим. Отличный онлайн-сервис. Все вовремя
-                                    обновляется, подробные предварительные сведения. Отчеты приходят в основном очень
-                                    быстро. Если задерживаются, мне объяснили, что это связано с внутренней линией связи
-                                    федеральной системы. Повлиять нельзя, но зато делается компенсация. Совсем редко,
-                                    если заказ нельзя получить, возвращают деньги. Однажды была ситуация, что пришли
-                                    данные ПУСТЫЕ, на другом сайте мне ничего не вернули, сказав, что мол документ такой
-                                    пришел, а на этом сервисе сразу сказали, что это возврат и вернули, в другой раз
-                                    просила компенсацию. Один раз мне дали юридическую консультацию, я очень довольна,
-                                    решилась масса вопросов!! Короче говоря, люди работают и делают свою работу очень
-                                    хорошо. Спасибо!
+                            <div class="rev-answer bgr">
+                                <h4 class="rev__name">Официальный ответ</h4>
+                                <p class="rev__time">8 сентября 2021 г.</p>
+                                <p class="rev__text">
+                                    Светлана, от лица всей нашей команды благодарим Вас за столь теплые слова. Рады
+                                    помочь! Небольшая коррекция: все-таки через наш сервис происходит быстрый запрос
                                 </p>
                             </div>
                         </div>
-                        <div class="rev-col fx-col">
-                            <div class="rev-item bgr">
-                                <h3 class="rev-item__header fx">
-                                    <span class="rev-item__name">Геннадий</span>
-                                    <img src="img/real-estate/stars.svg" alt="i" loading="lazy" class="rev-item__stars">
-                                </h3>
-                                <p class="rev-item__text">
-                                    Очень неплохой сайт для заказа быстрых отчетов онлайн! Все хорошо работает,
-                                    заказываю с планшета. В основном все приходит быстро!! Очень удобно все делать,
-                                    личный кабинет очень дружественный. Все супер!
-                                </p>
+                        <div class="rev-slide">
+                            <div class="rev-item fx-as">
+                                <img src="img/rev-empty.png" alt="i" loading="lazy" class="rev__icon">
+                                <div class="rev-content">
+                                    <h3 class="rev__name">Максим М.</h3>
+                                    <p class="rev__info fx-ac">
+                                        <img src="img/real-estate/stars.svg" alt="i" loading="lazy">
+                                        <span class="rev__time">6 сентября 2021 г.</span>
+                                    </p>
+                                    <p class="rev__text">
+                                        Пользуюсь данным ресурсом уже года два. Регулярно заказываю выписки ЕГРН.
+                                        Благодаря
+                                        пакетным предложениям, выписка выходит гораздо дешевле, чем если
+                                        заказывать
+                                    </p>
+                                </div>
                             </div>
-                            <div class="rev-item bgr">
-                                <h3 class="rev-item__header fx">
-                                    <span class="rev-item__name">Юлия Н.</span>
-                                    <img src="img/real-estate/stars.svg" alt="i" loading="lazy" class="rev-item__stars">
-                                </h3>
-                                <p class="rev-item__text">
-                                    С пары сайтов прислали невнятные документы, а здесь эцп, нормальный ценник,
-                                    поддержка отвечает быстро, очень все нравится. Два отчета пришли быстро, третья по
-                                    второму объекту немного задержалась. Но я в целом очень довольна. Документы принял
-                                    банк!! Проверил ЭЦП на сервисе гос.услуг, все сработало. Спасибо вам большое!
+                            <div class="rev-answer bgr">
+                                <h4 class="rev__name">Официальный ответ</h4>
+                                <p class="rev__time">8 сентября 2021 г.</p>
+                                <p class="rev__text">
+                                    Светлана, от лица всей нашей команды благодарим Вас за столь теплые слова. Рады
+                                    помочь! Небольшая коррекция: все-таки через наш сервис происходит быстрый запрос
                                 </p>
                             </div>
                         </div>
-                        <div class="rev-col fx-col">
-                            <div class="rev-item bgr">
-                                <h3 class="rev-item__header fx">
-                                    <span class="rev-item__name">Александр</span>
-                                    <img src="img/real-estate/stars.svg" alt="i" loading="lazy" class="rev-item__stars">
-                                </h3>
-                                <p class="rev-item__text">
-                                    Цена отчета очень демократичная! Хороший сервис! Поиск работает как по адресу с
-                                    подсказками, так по кадастровому номеру. Был момент с участком, когда было
-                                    задвоение, росреестр справок не дает, пришлось самому разбираться, мне очень помогли
-                                    по консультации - через чат-бота связался с юристом по недвижимости, мне абсолютно
-                                    бесплатно дали ценную информацию, там как выяснилось юрист-практик очень хороший,
-                                    кучу времени и денег сэкономил, сам все подал куда надо и решил свой вопрос. Очень
-                                    доволен. Всем рекомендую! Кто пишет всякие гадости про сайт, сами не знают вообще,
-                                    чего хотят. Уважайте чужой труд!
+                        <div class="rev-slide">
+                            <div class="rev-item fx-as">
+                                <img src="img/rev-empty.png" alt="i" loading="lazy" class="rev__icon">
+                                <div class="rev-content">
+                                    <h3 class="rev__name">Абушкевич А.А.</h3>
+                                    <p class="rev__info fx-ac">
+                                        <img src="img/real-estate/stars.svg" alt="i" loading="lazy">
+                                        <span class="rev__time">6 сентября 2021 г.</span>
+                                    </p>
+                                    <p class="rev__text">
+                                        Пользуюсь данным ресурсом уже года два. Регулярно заказываю выписки ЕГРН.
+                                        Благодаря
+                                        пакетным предложениям, выписка выходит гораздо дешевле, чем если
+                                        заказывать
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="rev-answer bgr">
+                                <h4 class="rev__name">Официальный ответ</h4>
+                                <p class="rev__time">8 сентября 2021 г.</p>
+                                <p class="rev__text">
+                                    Светлана, от лица всей нашей команды благодарим Вас за столь теплые слова. Рады
+                                    помочь! Небольшая коррекция: все-таки через наш сервис происходит быстрый запрос
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rev-slide">
+                            <div class="rev-item fx-as">
+                                <img src="img/rev-1.png" alt="i" loading="lazy" class="rev__icon">
+                                <div class="rev-content">
+                                    <h3 class="rev__name">Светлана</h3>
+                                    <p class="rev__info fx-ac">
+                                        <img src="img/real-estate/stars.svg" alt="i" loading="lazy">
+                                        <span class="rev__time">6 сентября 2021 г.</span>
+                                    </p>
+                                    <p class="rev__text">
+                                        Пользуюсь данным ресурсом уже года два. Регулярно заказываю выписки ЕГРН.
+                                        Благодаря
+                                        пакетным предложениям, выписка выходит гораздо дешевле, чем если
+                                        заказывать
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="rev-answer bgr">
+                                <h4 class="rev__name">Официальный ответ</h4>
+                                <p class="rev__time">8 сентября 2021 г.</p>
+                                <p class="rev__text">
+                                    Светлана, от лица всей нашей команды благодарим Вас за столь теплые слова. Рады
+                                    помочь! Небольшая коррекция: все-таки через наш сервис происходит быстрый запрос
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rev-slide">
+                            <div class="rev-item fx-as">
+                                <img src="img/rev-empty.png" alt="i" loading="lazy" class="rev__icon">
+                                <div class="rev-content">
+                                    <h3 class="rev__name">Максим М.</h3>
+                                    <p class="rev__info fx-ac">
+                                        <img src="img/real-estate/stars.svg" alt="i" loading="lazy">
+                                        <span class="rev__time">6 сентября 2021 г.</span>
+                                    </p>
+                                    <p class="rev__text">
+                                        Пользуюсь данным ресурсом уже года два. Регулярно заказываю выписки ЕГРН.
+                                        Благодаря
+                                        пакетным предложениям, выписка выходит гораздо дешевле, чем если
+                                        заказывать
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="rev-answer bgr">
+                                <h4 class="rev__name">Официальный ответ</h4>
+                                <p class="rev__time">8 сентября 2021 г.</p>
+                                <p class="rev__text">
+                                    Светлана, от лица всей нашей команды благодарим Вас за столь теплые слова. Рады
+                                    помочь! Небольшая коррекция: все-таки через наш сервис происходит быстрый запрос
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rev-slide">
+                            <div class="rev-item fx-as">
+                                <img src="img/rev-empty.png" alt="i" loading="lazy" class="rev__icon">
+                                <div class="rev-content">
+                                    <h3 class="rev__name">Абушкевич А.А.</h3>
+                                    <p class="rev__info fx-ac">
+                                        <img src="img/real-estate/stars.svg" alt="i" loading="lazy">
+                                        <span class="rev__time">6 сентября 2021 г.</span>
+                                    </p>
+                                    <p class="rev__text">
+                                        Пользуюсь данным ресурсом уже года два. Регулярно заказываю выписки ЕГРН.
+                                        Благодаря
+                                        пакетным предложениям, выписка выходит гораздо дешевле, чем если
+                                        заказывать
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="rev-answer bgr">
+                                <h4 class="rev__name">Официальный ответ</h4>
+                                <p class="rev__time">8 сентября 2021 г.</p>
+                                <p class="rev__text">
+                                    Светлана, от лица всей нашей команды благодарим Вас за столь теплые слова. Рады
+                                    помочь! Небольшая коррекция: все-таки через наш сервис происходит быстрый запрос
                                 </p>
                             </div>
                         </div>

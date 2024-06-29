@@ -44,6 +44,14 @@
             width: 100%
             max-width: 100%
 
+    @media screen and ( max-width: 900px )
+        &__content
+            padding: 30px 18px
+
+        &__heading 
+            text-align: center
+            margin-bottom: 20px
+        
 .property
     // padding: 50px 0
     position: relative
@@ -381,15 +389,21 @@
 
     @media screen and ( max-width: 1200px )
         &-slider
-            // max-width: 600px
+            width: 100vw
+            position: relative
+            z-index: 1
             margin: 0 auto
+            left: -30px
+
+        &__heading
+            text-align: center
 
         .slick
             &-list,
             &-track
                 display: flex !important
             &-slide
-                padding: 0 10px
+                padding: 0 80px
                 div
                     height: 100%
 
@@ -398,7 +412,12 @@
         justify-content: center
         align-items: center
         margin: 40px 0
-        .inner-wrap
+        &-slider
+            left: -10px
+
+        .slick
+            &-slide
+                padding: 0 40px
 
         &-col
             max-width: calc( 100% - 40px )
@@ -413,6 +432,19 @@
 
         &-form
             flex-direction: column
+
+        &-item
+            padding: 30px
+            &__heading
+                font-size: 15px
+                line-height: 17.78px
+                margin-bottom: 40px
+                img
+                    height: 36px
+
+        .slick
+            &-slide
+                padding: 0 10px
 
 .how
     // padding: 50px 0
@@ -514,17 +546,19 @@
         &-box
             max-width: 700px
             margin: 0 auto 60px
+        
         &-title
             max-width: 100%
             margin: 0 auto
 
         &__text
-            margin-bottom: 20px
+            margin-bottom: 40px
 
         &__img
             display: block
             width: 300px
-            margin: 0 auto 20px
+            max-width: 100%
+            margin: 0 auto 40px
 
     @media screen and ( max-width: 700px )
         &-more
@@ -558,6 +592,9 @@
                 &--purple
                     .box__text
                         max-width: 100%
+
+        &-title
+            padding: 40px 27px
 
 .dnt
     &-box
@@ -783,22 +820,45 @@
         &-controls
             display: none
 
-        &-slide 
+        &-slide
             display: block !important
             padding: 0 15px
 
-        &__img 
+        &__img
             width: 100%
-            max-width: 400px 
+            max-width: 75%
             margin: 0 auto 30px
 
-        &-content 
+        &-content
             width: 100%
 
-        .slick 
-            &-dots 
+        .slick
+            &-dots
                 width: calc( 100% - 50px )
-                margin: 0 auto 
+                margin: 0 auto
+
+    @media screen and ( max-width: 700px )
+        padding: 30px 0 22px
+        &-top
+            padding: 20px 17px
+
+        &-bottom
+            padding: 20px
+
+        &__heading
+            text-align: center
+            font-size: 15px
+            line-height: 17.78px
+
+        &__text
+            font-size: 12px
+            line-height: 14.22px
+
+        &-list
+            li
+                font-size: 12px
+                line-height: 14.22px
+                padding-left: 21px
 
 .serv
     // padding: 50px 0 60px
@@ -856,6 +916,8 @@
             margin-top: auto
 
     @media screen and ( max-width: 900px )
+        &__heading
+            color: var(--clr-att)
         &-row
             display: block
 
@@ -863,6 +925,19 @@
             &:first-child
                 width: 100%
                 margin-bottom: 20px
+
+        &-list
+            padding: 0 9px
+            margin-bottom: 40px
+    @media screen and ( max-width: 700px )
+        &-box
+            padding: 40px 10px 20px
+
+        &-item
+            padding: 30px 15px 20px
+            text-align: center
+            &.--orange
+                text-align: left
 
 .req
     // padding: 60px 0
@@ -893,10 +968,11 @@
         height: 100%
         object-fit: cover
         z-index: -111
+        pointer-events: none
 
     @media screen and ( max-width: 700px )
         &-box
-            padding: 40px 28px
+            padding: 40px 24px
         &__heading
             text-align: center
 
@@ -931,9 +1007,22 @@
         line-height: 19.6px
         font-weight: 400
         margin: 8px 0 0
+        &--hidden 
+            display: none
 
+    &__more
+        color: var(--clr-att)
+        border: none
+        padding: 0
+        background: rgba(0, 0, 0, 0)
+        display: inline
+        // &::before
+        //     content: '...'
+        //     margin-right: 2px
+        //     color: var(--clr-base)
     &__info
         gap: 12px
+        white-space: nowrap
         margin: 0
         img
             display: block
@@ -970,6 +1059,35 @@
                     flex: unset
                     min-width: 10%
 
+    @media screen and ( max-width: 700px )
+        &__heading
+            padding: 0 10px
+
+        &__name
+            font-size: 14px
+            line-height: 21px
+
+        &__time
+            font-size: 12px
+            line-height: 16.8px
+
+        &__info 
+            gap: 10px
+
+        &__text
+            font-size: 12px
+            line-height: 16.8px
+
+        &-slide 
+            padding: 18px
+
+        .slick
+            &-list
+                padding: 0
+
+            &-slide 
+                padding: 0 10px
+
 .blg
     background-color: #fff
     padding: 80px 0
@@ -1001,10 +1119,15 @@
 
     @media screen and ( max-width: 900px )
         padding: 60px 0
+        margin: 50px 0
+        &__heading
+            margin-bottom: 20px
+
         &-row
             flex-direction: column
             max-width: 700px
             margin: 0 auto 60px
+
         &-title
             order: 2
             width: 100%
@@ -1014,6 +1137,13 @@
             order: 1
             margin: 0 auto 40px
             width: 100%
+
+    @media screen and ( max-width: 900px )
+        margin: 40px 0
+        padding: 40px 0
+        &__text
+            font-size: 16px
+            line-height: 18.96px
 
 .ques
     box-shadow: 0px 2px 20px 0px #0000000D
@@ -1065,6 +1195,10 @@
             font-size: 15px
             line-height: 17.78px
 
+        &__bg
+            object-position: center top
+
+
         &-form
             flex-wrap: wrap
             max-width: 700px
@@ -1080,6 +1214,7 @@
 
     @media screen and ( max-width: 700px )
         padding: 40px 0 24px
+        margin-top: 40px
         &-form
             input
                 width: 100%

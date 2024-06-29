@@ -503,6 +503,27 @@ $(document).ready(function () {
 
 
 
+$('.tgl-mob__btn').on('click', function () {
+	$(this).parent('.tgl-mob').addClass('is__show');
+	$(this).remove();
+})
+
+$(function () {
+	var maxLen = 130;
+	$('.rev__text').each(function () {
+		var text = $(this).text();
+		if (text.length > maxLen) {
+			$(this).html(text.slice(0, maxLen).trim() + '<i>...</i> <button class="rev__more">Читать далее</button><span class="rev__text--hidden">' + text.slice(maxLen).trim() + '</span>');
+		}
+	});
+
+	$(document).on('click', '.rev__more', function () {
+		$(this).siblings('.rev__text--hidden').toggle();
+		$(this).prev().remove();
+		$(this).remove();
+	});
+});
+
 //swiper slider
 const swiperAll = new Swiper('.tiles-slider-box.all-slider .swiper', {
 	// Optional parameters

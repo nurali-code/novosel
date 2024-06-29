@@ -131,11 +131,14 @@ b, strong
         justify-content: space-between
 
 .wrap-new
+    padding: 0 !important
     @media screen and ( max-width: 1024px )
-        .btn, input
+        .btn, input, textarea
             height: 50px
-            width: 100%
 
+    @media screen and ( max-width: 700px )
+        .btn
+            width: 100%
     @media screen and ( max-width: 800px )
         .h_03, .h_02
             text-align: center

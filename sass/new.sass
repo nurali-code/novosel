@@ -363,6 +363,7 @@
     &-item
         padding: 40px
         width: 33.33%
+        text-align: left !important
         &__heading
             font-size: 24px
             line-height: 28.44px
@@ -398,6 +399,20 @@
         align-items: center
         margin: 40px 0
         .inner-wrap
+
+        &-col
+            max-width: calc( 100% - 40px )
+            margin: 0 auto
+
+    @media screen and ( max-width: 700px )
+        &-box
+            font-size: 15px
+            line-height: 17.78px
+            padding: 20px 15px
+            margin-bottom: 40px
+
+        &-form
+            flex-direction: column
 
 .how
     // padding: 50px 0
@@ -526,7 +541,7 @@
                 font-size: 15px
                 line-height: 17.78px
 
-            &__subtext 
+            &__subtext
                 font-size: 16px
                 line-height: 18.96px
 
@@ -536,7 +551,7 @@
                     line-height: 18.96px
 
             .box
-                &.fx 
+                &.fx
                     display: block
                 &__text
 
@@ -545,10 +560,11 @@
                         max-width: 100%
 
 .dnt
-    // padding: 50px 0
     &-box
         justify-content: space-between
         margin-bottom: 40px
+        position: relative
+        z-index: 1
 
     &-title
         width: 60%
@@ -580,8 +596,13 @@
         line-height: 21.33px
 
     &-slider
-        padding-right: 40px
-        min-width: 58%
+        @media screen and ( min-width: 800px )
+            padding-right: 40px
+            min-width: 58%
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
 
     &-slide
         text-align: center
@@ -610,8 +631,51 @@
             padding: 20px 20px 0 0
 
         &-slider
-            width: 40%
-            min-width: unset
+            @media screen and ( min-width: 800px )
+                width: 40%
+                min-width: unset
+
+    @media screen and ( max-width: 800px )
+        &__heading
+            margin-bottom: 40px
+
+        &__subtext
+            text-align: center
+            margin-bottom: 20px
+
+        &__text
+            max-width: 100%
+
+        &-box
+            display: block
+
+        &-title
+            padding: 40px
+            width: 100%
+
+        &-img
+            max-width: 100%
+            width: 400px
+            margin: 0 auto
+            img
+                display: block
+
+        &-slider
+            margin: 60px auto 0
+
+        &-slide
+            margin: 0
+            img
+                min-width: unset
+                max-width: 220px
+
+        .btn
+            margin-top: 40px
+            width: 100%
+
+    @media screen and ( max-width: 700px )
+        &-title
+            padding: 40px 10px 20px
 
 .exmp
     padding: 40px
@@ -765,6 +829,15 @@
         .btn
             margin-top: auto
 
+    @media screen and ( max-width: 900px )
+        &-row
+            display: block
+
+        &-item
+            &:first-child
+                width: 100% 
+                margin-bottom: 20px
+
 .req
     // padding: 60px 0
     &-col
@@ -868,6 +941,7 @@
     padding: 80px 0
     margin: 60px 0
     &-row
+        align-items: center
         justify-content: space-between
         margin-bottom: 78px
         &:last-of-type
@@ -891,6 +965,22 @@
         display: block
         object-fit: cover
 
+    @media screen and ( max-width: 900px )
+        padding: 60px 0
+        &-row
+            flex-direction: column
+            max-width: 700px
+            margin: 0 auto 60px
+        &-title
+            order: 2
+            width: 100%
+            max-width: 100%
+
+        &__img
+            order: 1
+            margin: 0 auto 40px
+            width: 100%
+
 .ques
     box-shadow: 0px 2px 20px 0px #0000000D
     margin: 60px 0 0
@@ -910,9 +1000,6 @@
         pointer-events: none
 
     &__heading
-        font-weight: 500
-        font-size: 30px
-        line-height: 35.55px
         margin: 0 0 40px
 
     &__text
@@ -934,3 +1021,31 @@
     textarea
         padding: 16px 20px 0
         resize: none
+
+    @media screen and ( max-width: 900px )
+        padding: 50px 0
+        &__heading
+            margin-bottom: 30px
+
+        &__text
+            font-size: 15px
+            line-height: 17.78px
+
+        &-form
+            flex-wrap: wrap
+            max-width: 700px
+            margin: 0 auto
+            input
+                width: calc( 50% - 5px )
+
+            textarea
+                width: 100%
+
+            .btn
+                width: 100%
+
+    @media screen and ( max-width: 700px )
+        padding: 40px 0 24px
+        &-form
+            input
+                width: 100%

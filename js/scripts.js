@@ -599,7 +599,6 @@ $slider.slick({
 				slidesToShow: 1,
 				// variableWidth: false,
 				dots: true,
-				adaptiveHeight: true,
 			}
 		},
 	]

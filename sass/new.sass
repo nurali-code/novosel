@@ -1,22 +1,7 @@
 @import 'elements'
-.breadcrumbs
-    padding: 20px 0 0
-    margin: 0
-    &-item
-
-    &__link
-        display: block
-        font-size: 12px
-        font-weight: 300
-        line-height: 14.22px
-        color: var(--clr-base)
-        padding: 6px 8px
-        &::after
-            content: '>'
-            margin-left: 8px
 
 .inf
-    // padding: 50px 0
+    padding-top: 10px
     &-box
         justify-content: space-between
 
@@ -177,6 +162,9 @@
                 margin-right: 10px
                 width: calc( 100vw - 20px )
 
+            &-dots
+                padding-top: 20px
+
         &__headline
             width: 100%
 
@@ -238,8 +226,22 @@
         line-height: 28.44px
         margin: 0
 
+    @media screen and ( max-width: 950px )
+        flex-direction: column
+        &__heading
+            text-align: center
+            br
+                display: none
+
+    @media screen and ( max-width: 700px )
+        padding: 40px 16px
+        margin: 40px 0 80px
+        &__heading
+            font-size: 20px
+            line-height: 23.7px
+
 .apart
-    margin: 0 0 100px
+    margin: 0 0 50px
     background: #E2DCF7
     box-shadow: 0px 2px 20px 0px #0000000D
     border-radius: 10px
@@ -265,7 +267,13 @@
     &-tip
         max-width: 913px
         margin: 0 auto
+        &__img
+            object-fit: contain
+            object-position: center center
+            width: 40%
+
         &__title
+            width: 60%
             padding: 40px
 
         &__heading
@@ -277,6 +285,42 @@
             line-height: 23.7px
             font-style: italic
             font-weight: 400
+
+    @media screen and ( max-width: 800px )
+        &__text
+            font-size: 15px
+            line-height: 17.78px
+
+        &-form
+            flex-direction: column
+            .button-ico
+                display: none
+        &-tip
+            display: block
+            max-width: 600px
+            margin: 0 auto
+            text-align: center
+            &__img
+                width: 400px
+                margin: 0 auto
+                display: block
+                max-width: 100%
+
+            &__title
+                padding: 34px 18px
+                width: 100%
+
+            &__heading
+                margin-bottom: 30px
+
+            &__text
+                text-align: left
+
+    @media screen and ( max-width: 700px )
+        padding: 40px 10px 10px
+        margin-bottom: 40px
+        &__heading
+            margin-bottom: 40px
 
 .wide
     position: relative
@@ -293,6 +337,7 @@
         height: 100%
         z-index: -11
         object-fit: cover
+        object-position: center center
         pointer-events: none
 
     &-col
@@ -347,11 +392,18 @@
                 div
                     height: 100%
 
+    @media screen and ( max-width: 900px )
+        text-align: center
+        justify-content: center
+        align-items: center
+        margin: 40px 0
+        .inner-wrap
+
 .how
     // padding: 50px 0
     &-box
-        padding-right: 30px
         margin-bottom: 100px
+        min-height: 343px
 
     &__text
         font-size: 16px
@@ -419,8 +471,14 @@
             margin-bottom: 40px
 
     &__img
-        max-width: 30%
         object-fit: contain
+        @media screen and ( min-width: 800px )
+            position: absolute
+            top: 50%
+            height: 100%
+            right: 30px
+            transform: translateY(-50%)
+            max-width: 30%
 
     @media screen and ( max-width: 1200px )
         &-more
@@ -436,6 +494,55 @@
 
             .box
                 width: 100% !important
+
+    @media screen and ( max-width: 800px )
+        &-box
+            max-width: 700px
+            margin: 0 auto 60px
+        &-title
+            max-width: 100%
+            margin: 0 auto
+
+        &__text
+            margin-bottom: 20px
+
+        &__img
+            display: block
+            width: 300px
+            margin: 0 auto 20px
+
+    @media screen and ( max-width: 700px )
+        &-more
+            padding: 10px
+            &__heading
+                text-align: left !important
+                font-size: 20px
+                line-height: 23.7px
+
+            &__box
+                padding: 20px 15px 20px 20px
+
+            &__text
+                font-size: 15px
+                line-height: 17.78px
+
+            &__subtext 
+                font-size: 16px
+                line-height: 18.96px
+
+            &__list
+                li
+                    font-size: 16px
+                    line-height: 18.96px
+
+            .box
+                &.fx 
+                    display: block
+                &__text
+
+                &--purple
+                    .box__text
+                        max-width: 100%
 
 .dnt
     // padding: 50px 0

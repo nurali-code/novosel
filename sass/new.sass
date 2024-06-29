@@ -48,10 +48,10 @@
         &__content
             padding: 30px 18px
 
-        &__heading 
+        &__heading
             text-align: center
             margin-bottom: 20px
-        
+
 .property
     // padding: 50px 0
     position: relative
@@ -362,6 +362,9 @@
 
     &-form
         gap: 10px
+        .form
+            &-box 
+                width: 100%
 
     &-slider
         gap: 20px
@@ -546,7 +549,7 @@
         &-box
             max-width: 700px
             margin: 0 auto 60px
-        
+
         &-title
             max-width: 100%
             margin: 0 auto
@@ -1007,7 +1010,7 @@
         line-height: 19.6px
         font-weight: 400
         margin: 8px 0 0
-        &--hidden 
+        &--hidden
             display: none
 
     &__more
@@ -1071,21 +1074,21 @@
             font-size: 12px
             line-height: 16.8px
 
-        &__info 
+        &__info
             gap: 10px
 
         &__text
             font-size: 12px
             line-height: 16.8px
 
-        &-slide 
+        &-slide
             padding: 18px
 
         .slick
             &-list
                 padding: 0
 
-            &-slide 
+            &-slide
                 padding: 0 10px
 
 .blg
@@ -1177,10 +1180,16 @@
         max-width: 1216px
         margin: 0 auto
         input
-            width: 63.46%
 
         .btn
             width: 21.2%
+
+    .form
+        &-box
+            width: 21.47%
+        &-box
+            &.--last
+                width: 33.389%
 
     textarea
         padding: 16px 20px 0
@@ -1198,23 +1207,22 @@
         &__bg
             object-position: center top
 
-
         &-form
             flex-wrap: wrap
             max-width: 700px
             margin: 0 auto
-            input
+            .btn
+                width: 100%
+        .form
+            &-box
                 width: calc( 50% - 5px )
 
-            textarea
-                width: 100%
-
-            .btn
+            &-box.--last
                 width: 100%
 
     @media screen and ( max-width: 700px )
         padding: 40px 0 24px
         margin-top: 40px
-        &-form
-            input
+        .form
+            &-box
                 width: 100%

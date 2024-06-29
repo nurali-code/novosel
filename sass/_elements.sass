@@ -34,9 +34,15 @@ b, strong
     font-weight: 500
 
 .form
+    &-box
+        text-align: left
     &-input
         &::placeholder
             color: rgba(7, 7, 7, 0.5)
+
+        &.error-outline
+            color: red
+            outline: 1px solid red
 
     &__policy
         font-size: 12px
@@ -48,6 +54,13 @@ b, strong
             color: inherit
             &:hover
                 opacity: .7
+
+    &-error
+        text-align: left
+        padding: 10px
+        color: red
+        font-size: 12px
+        display: none
 
 .button
     &-att
@@ -145,9 +158,9 @@ b, strong
 
 @media screen and ( min-width: 700px )
     .tgl-mob
-        * 
+        *
             margin: 0 !important
-        &__btn 
+        &__btn
             display: none
 @media screen and ( max-width: 700px )
     .section

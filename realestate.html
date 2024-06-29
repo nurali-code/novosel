@@ -160,13 +160,15 @@
                             </p>
                             <div class="tgl-mob">
                                 <p class="inf__description">
-                                    Мы давно убедились, что отправной точкой на пути к успешной сделке лежит самостоятельный
+                                    Мы давно убедились, что отправной точкой на пути к успешной сделке лежит
+                                    самостоятельный
                                     анализ
                                     данных. Даже если вы не разбираетесь в цифрах, вам поможет свежий человек, логика и
                                     здравый
                                     смысл.
                                     <br><br>
-                                    Запросите отчет об интересующем вас объекте недвижимости с помощью нашего онлайн-сервиса
+                                    Запросите отчет об интересующем вас объекте недвижимости с помощью нашего
+                                    онлайн-сервиса
                                     информационных отчетов, согласно сведениям ЕГРН.
                                 </p>
                                 <span class="btn-action-ico ico-arrow tgl-mob__btn"></span>
@@ -299,7 +301,7 @@
             <!-- /included -->
 
             <!-- apart -->
-            <div class="apart">
+            <div class="apart" id="apart">
                 <h2 class="apart__heading h_03">
                     После показа квартиры запишите ее номер. <br>
                     Вводите по порядку или вставьте полный адрес от города до квартиры.
@@ -366,9 +368,10 @@
                             <img src="img/real-estate/how-mob.jpg" alt="i" loading="lazy" class="how__img">
                         </picture>
                         <div class="how-row fx-w">
-                            <button class="btn button-att">Отчет об объекте</button>
-                            <button class="btn button-att">Отчет о переходе прав</button>
-                            <button class="btn">Заказать 2 отчета</button>
+                            <a href="#exmp" class="btn button-att">Отчет об объекте</a>
+                            <a href="#exmp" class="btn button-att" onclick="gotoSlide('.exmp-slider', 2)">Отчет о
+                                переходе прав</a>
+                            <a href="#apart" class="btn">Заказать 2 отчета</a>
                         </div>
                     </div>
                 </div>
@@ -442,7 +445,9 @@
                         </h3>
                         <p class="how-more__subtext">
                             Да, все подготовлено для частых заказов, если у Вас много объектов
-                            или Вы постоянно работаете с недвижимостью. <a href="#">Пакетные предложения</a>
+                            или Вы постоянно работаете с недвижимостью. <a
+                                href="https://publichnaya-kadastrovaya-karta.com/egrn/#block7" target="_blank">Пакетные
+                                предложения</a>
                             сформированы на
                             нашем сервисе.
                         </p>
@@ -466,8 +471,14 @@
                     </div>
 
                     <form class="wide-form fx">
-                        <input type="text" class="form-input" placeholder="Имя" required>
-                        <input type="email" class="form-input" placeholder="E-mail" required>
+                        <div class="form-box">
+                            <input required type="text" class="form-input" name="name" placeholder="Имя">
+                            <span class="form-error nameError">Не более 15 символов</span>
+                        </div>
+                        <div class="form-box">
+                            <input required type="email" class="form-input" name="email" placeholder="E-mail">
+                            <span class="form-error emailError">Некорректный e-mail</span>
+                        </div>
                         <button type="submit" class="btn">Отправить</button>
                     </form>
                     <p class="form__policy">Нажимая кнопку “Отправить” Вы соглашаетесь с <a href="#">политикой
@@ -531,7 +542,7 @@
                     </div>
                 </div>
 
-                <div class="exmp bgr">
+                <div class="exmp bgr" id="exmp">
                     <div class="exmp-header fx-ac">
                         <h2 class="h_03 exmp__headline">Примеры готовых отчетов об объекте недвижимости</h2>
                         <div class="exmp-controls fx-ac">
@@ -981,9 +992,18 @@
                     Оставьте заявку и мы перезвоним!
                 </p>
                 <form class="ques-form fx">
-                    <input type="text" class="form-input" placeholder="Имя" required>
-                    <input type="email" class="form-input" placeholder="E-mail" required>
-                    <textarea type="text" class="form-input" placeholder="Комментарий" required></textarea>
+                    <div class="form-box">
+                        <input required type="text" class="form-input" name="name" placeholder="Имя">
+                        <span class="form-error nameError">Не более 15 символов</span>
+                    </div>
+                    <div class="form-box">
+                        <input required type="email" class="form-input" name="email" placeholder="E-mail">
+                        <span class="form-error emailError">Некорректный e-mail</span>
+                    </div>
+                    <div class="form-box --last">
+                        <textarea required type="text" class="form-input" name="comment" placeholder="Комментарий"></textarea>
+                        <span class="form-error commentError">Не более 150 символов</span>
+                    </div>
                     <button type="submit" class="btn">Отправить</button>
                 </form>
                 <p class="form__policy">

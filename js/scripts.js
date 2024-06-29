@@ -501,29 +501,6 @@ $(document).ready(function () {
 	};
 });
 
-
-
-$('.tgl-mob__btn').on('click', function () {
-	$(this).parent('.tgl-mob').addClass('is__show');
-	$(this).remove();
-})
-
-$(function () {
-	var maxLen = 130;
-	$('.rev__text').each(function () {
-		var text = $(this).text();
-		if (text.length > maxLen) {
-			$(this).html(text.slice(0, maxLen).trim() + '<i>...</i> <button class="rev__more">Читать далее</button><span class="rev__text--hidden">' + text.slice(maxLen).trim() + '</span>');
-		}
-	});
-
-	$(document).on('click', '.rev__more', function () {
-		$(this).siblings('.rev__text--hidden').toggle();
-		$(this).prev().remove();
-		$(this).remove();
-	});
-});
-
 //swiper slider
 const swiperAll = new Swiper('.tiles-slider-box.all-slider .swiper', {
 	// Optional parameters
@@ -558,6 +535,37 @@ const swiperAll = new Swiper('.tiles-slider-box.all-slider .swiper', {
 			},
 		},
 	},
+});
+
+
+
+
+$('a[href*="#"]').on('click', function (e) {
+	e.preventDefault();
+	$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 10, }, 500,)
+});
+
+$('.tgl-mob__btn').on('click', function () {
+	$(this).parent('.tgl-mob').addClass('is__show');
+	$(this).remove();
+})
+
+function gotoSlide(slider, slide) { $(slider).slick('slickGoTo', slide); }
+
+$(function () {
+	var maxLen = 130;
+	$('.rev__text').each(function () {
+		var text = $(this).text();
+		if (text.length > maxLen) {
+			$(this).html(text.slice(0, maxLen).trim() + '<i>...</i> <button class="rev__more">Читать далее</button><span class="rev__text--hidden">' + text.slice(maxLen).trim() + '</span>');
+		}
+	});
+
+	$(document).on('click', '.rev__more', function () {
+		$(this).siblings('.rev__text--hidden').toggle();
+		$(this).prev().remove();
+		$(this).remove();
+	});
 });
 
 if (window.innerWidth > 1023) {
@@ -601,7 +609,6 @@ if (window.innerWidth > 1023) {
 var $slider = $('.property-slider');
 $slider.on('init', function (event, slick) { $('.property__total').text(slick.slideCount); });
 $slider.on('afterChange', function (event, slick, currentSlide) { $('.property__current').text(currentSlide + 1); });
-
 $slider.slick({
 	dots: false,
 	slidesToShow: 1,
@@ -635,8 +642,9 @@ $('.exmp-slider').slick({
 	swipeToSlide: true,
 	prevArrow: $('.exmp-controls .ico-arrow-prev'),
 	nextArrow: $('.exmp-controls .ico-arrow-next'),
-	autoplay: false,
-	autoplaySpeed: 2000,
+	autoplay: true,
+	autoplaySpeed: 10000,
+	pauseOnFocus: true,
 })
 
 // 2 sliders
@@ -684,3 +692,47 @@ $('.rev-slider').slick({
 	]
 })
 
+$('form').on('submit', function (event) {
+	event.preventDefault(); 
+	// Получаем значения полей формы
+	const form = $(this);
+	const nameInput = form.find('input[name="name"]');
+	const commentInput = form.find('textarea[name="comment"]');
+	const submitButton = form.find('button');
+	console.log(nameInput);
+
+	let valid = true;
+
+	// Проверка имени
+	const nameValue = nameInput.val().trim();
+	const nameError = form.find('.nameError');
+	if (!/^[а-яА-ЯёЁa-zA-Z]+$/.test(nameValue) || nameValue.length > 15) {
+		nameError.show();
+		nameInput.addClass('error-outline');
+		valid = false;
+	} else {
+		nameError.hide();
+		nameInput.removeClass('error-outline');
+	}
+
+	// Проверка комментария
+	if (commentInput.length !== 0) {
+		const commentValue = commentInput.val().trim();
+		const commentError = form.find('.commentError');
+		if (commentValue.length > 150) {
+			commentError.show();
+			commentInput.addClass('error-outline');
+			valid = false;
+		} else {
+			commentError.hide();
+			commentInput.removeClass('error-outline');
+		}
+	}
+
+	// Если все поля валидны, показываем сообщение об успешной отправке
+	if (valid) {
+		submitButton.text('Отправлено!');
+		submitButton.addClass('success');
+		submitButton.prop('disabled', true); // отключаем кнопку отправки после успешной отправки
+	}
+});

@@ -588,8 +588,8 @@ $slider.slick({
 	infinite: false,
 	adaptiveHeight: false,
 	swipeToSlide: true,
-	prevArrow: $('.property-prev'),
-	nextArrow: $('.property-next'),
+	prevArrow: $('.property-controls .ico-arrow-prev'),
+	nextArrow: $('.property-controls .ico-arrow-next'),
 	autoplay: false,
 	autoplaySpeed: 2000,
 	responsive: [
@@ -604,7 +604,6 @@ $slider.slick({
 	]
 })
 
-
 // exmp-slider
 $('.exmp-slider').slick({
 	dots: true,
@@ -613,8 +612,8 @@ $('.exmp-slider').slick({
 	infinite: false,
 	adaptiveHeight: true,
 	swipeToSlide: true,
-	prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
-	nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',
+	prevArrow: $('.exmp-controls .ico-arrow-prev'),
+	nextArrow: $('.exmp-controls .ico-arrow-next'),
 	autoplay: false,
 	autoplaySpeed: 2000,
 })

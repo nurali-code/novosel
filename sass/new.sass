@@ -102,7 +102,7 @@
         font-size: 24px
         line-height: 28.44px
 
-    &-prev
+    .ico-arrow-prev
         margin-right: 20px
 
     &-box
@@ -680,17 +680,18 @@
 .exmp
     padding: 40px
     position: relative
-    &__headline
-        max-width: 85%
+    &-header
         margin-bottom: 60px
 
-    .slick
-        &-arrow
-            display: inline-block
-            position: absolute
-            top: 33px
-            right: 40px
+    &__headline
+        max-width: 85%
+        margin: 0
 
+    &-controls
+        margin-left: auto
+        gap: 20px
+
+    .slick
         &-slider
             position: static
 
@@ -698,11 +699,6 @@
             padding-top: 35px
             li
                 max-width: unset
-
-    .ico
-        &-arrow
-            &-prev
-                right: 110px
 
     &-slide
         padding: 0 5px
@@ -774,6 +770,36 @@
         min-height: 50%
         padding: 30px
 
+    @media screen and ( max-width: 800px )
+        padding: 30px 0
+        &__headline
+            width: 100%
+            max-width: 100%
+
+        &-header
+            padding: 0 10px
+            margin-bottom: 40px
+
+        &-controls
+            display: none
+
+        &-slide 
+            display: block !important
+            padding: 0 15px
+
+        &__img 
+            width: 100%
+            max-width: 400px 
+            margin: 0 auto 30px
+
+        &-content 
+            width: 100%
+
+        .slick 
+            &-dots 
+                width: calc( 100% - 50px )
+                margin: 0 auto 
+
 .serv
     // padding: 50px 0 60px
     &__heading
@@ -835,7 +861,7 @@
 
         &-item
             &:first-child
-                width: 100% 
+                width: 100%
                 margin-bottom: 20px
 
 .req
@@ -850,6 +876,8 @@
 
     &__heading
         margin-bottom: 20px
+        @media screen and ( min-width: 700px )
+            text-align: left !important
 
     &__text
         font-size: 18px
@@ -865,6 +893,12 @@
         height: 100%
         object-fit: cover
         z-index: -111
+
+    @media screen and ( max-width: 700px )
+        &-box
+            padding: 40px 28px
+        &__heading
+            text-align: center
 
 .rev
     &-box

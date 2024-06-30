@@ -36,13 +36,15 @@ b, strong
 .form
     &-box
         text-align: left
+
     &-input
         &::placeholder
             color: rgba(7, 7, 7, 0.5)
 
         &.error-outline
             color: red
-            outline: 1px solid red
+            outline: 2px solid #ff5d5d
+            background-color: #fff9f9
 
     &__policy
         font-size: 12px
@@ -58,9 +60,19 @@ b, strong
     &-error
         text-align: left
         padding: 10px
-        color: red
+        color: #ff2525
         font-size: 12px
         display: none
+
+.btn 
+    transition: all .5s ease
+    &:disabled
+        cursor: not-allowed
+        pointer-events: none
+
+    &.form-success
+        background-color: #00b922
+        border-color: #00b922
 
 .button
     &-att

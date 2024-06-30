@@ -676,8 +676,7 @@ function mobileOnly() {
 		sliderStat = false;
 		$('.dnt-slider, .wide-slider').slick({ settings: "unslick" })
 	}
-}
-mobileOnly();
+} mobileOnly();
 $(window).resize(function () { mobileOnly(); });
 
 
@@ -720,9 +719,13 @@ $('.form-validate').on('submit', function (event) {
 
 	// Проверка имени
 	const nameValue = nameInput.val().trim();
-	const nameError = form.find('.nameError');
-	if (!/^[а-яА-ЯёЁa-zA-Z]+$/.test(nameValue) || nameValue.length > 15) {
-		nameError.show();
+	const nameError = nameInput.next();
+	if (!/^[а-яА-ЯёЁa-zA-Z\s]+$/.test(nameValue)) {
+		nameError.text('Только Буквы без символов').show();
+		nameInput.addClass('error-outline');
+		valid = false;
+	} else if (nameValue.length > 15) {
+		nameError.text('Не более 15 символов').show();
 		nameInput.addClass('error-outline');
 		valid = false;
 
@@ -734,9 +737,9 @@ $('.form-validate').on('submit', function (event) {
 	// Проверка комментария
 	if (commentInput.length !== 0) {
 		const commentValue = commentInput.val().trim();
-		const commentError = form.find('.commentError');
+		const commentError = commentInput.next();
 		if (commentValue.length > 150) {
-			commentError.show();
+			commentError.text('Не более 150 символов').show();
 			commentInput.addClass('error-outline');
 			valid = false;
 		} else {
@@ -748,7 +751,7 @@ $('.form-validate').on('submit', function (event) {
 	// Если все поля валидны, показываем сообщение об успешной отправке
 	if (valid) {
 		submitButton.text('Отправлено!');
-		submitButton.addClass('success');
+		submitButton.addClass('form-success');
 		submitButton.prop('disabled', true); // отключаем кнопку отправки после успешной отправки
 	}
 });

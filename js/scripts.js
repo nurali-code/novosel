@@ -647,26 +647,41 @@ $('.exmp-slider').slick({
 	pauseOnFocus: true,
 })
 
-// 2 sliders
-$('.dnt-slider, .wide-slider').slick({
-	dots: true,
-	arrows: false,
-	slidesToShow: 1,
-	infinite: false,
-	mobileFirst: true,
-	centerPadding: 0,
-	centerMode: true,
-	swipeToSlide: true,
-	autoplay: false,
-	autoplaySpeed: 2000,
-	responsive: [
-		{
-			breakpoint: 1200,
-			settings: "unslick"
+
+function mobileOnly() {
+	var sliderStat = false;
+	if ($(window).width() < 1200 && !sliderStat) {
+		if (!$('.galery-slider').length) {
+			$('.dnt-slider, .wide-slider').slick({
+				dots: true,
+				arrows: false,
+				slidesToShow: 1,
+				infinite: false,
+				mobileFirst: true,
+				centerPadding: 0,
+				centerMode: true,
+				swipeToSlide: true,
+				autoplay: false,
+				autoplaySpeed: 2000,
+				responsive: [
+					{
+						breakpoint: 1200,
+						settings: "unslick"
+					}
+				]
+			})
+			sliderStat = true;
 		}
-	]
-})
-// 2 sliders
+	} else if (sliderStat) {
+		sliderStat = false;
+		$('.dnt-slider, .wide-slider').slick({ settings: "unslick" })
+	}
+}
+mobileOnly();
+$(window).resize(function () { mobileOnly(); });
+
+
+// review slider
 $('.rev-slider').slick({
 	dots: true,
 	arrows: false,
@@ -692,8 +707,8 @@ $('.rev-slider').slick({
 	]
 })
 
-$('form').on('submit', function (event) {
-	event.preventDefault(); 
+$('.form-validate').on('submit', function (event) {
+	event.preventDefault();
 	// Получаем значения полей формы
 	const form = $(this);
 	const nameInput = form.find('input[name="name"]');
@@ -710,7 +725,7 @@ $('form').on('submit', function (event) {
 		nameError.show();
 		nameInput.addClass('error-outline');
 		valid = false;
-		
+
 	} else {
 		nameError.hide();
 		nameInput.removeClass('error-outline');

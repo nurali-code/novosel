@@ -710,6 +710,7 @@ $('form').on('submit', function (event) {
 		nameError.show();
 		nameInput.addClass('error-outline');
 		valid = false;
+		
 	} else {
 		nameError.hide();
 		nameInput.removeClass('error-outline');
